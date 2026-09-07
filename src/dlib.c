@@ -1,0 +1,16 @@
+#define JSON_PARSER_IMPLEMENTATION
+#include "parsers/json_parser.h"
+#define DARRAY_IMPLEMENTATION
+#include "data_structures/darray.h"
+#define DGRAPH_IMPLEMENTATION
+#include "data_structures/dgraph.h"
+#define DHASH_TABLE_IMPLEMENTATION
+#include "data_structures/dhash_table.h"
+#define DLINKED_LIST_IMPLEMENTATION
+#include "data_structures/dlinked_list.h"
+#define DSEARCH_TREE_IMPLEMENTATION
+#include "data_structures/dsearch_tree.h"
+#define DSTRING_IMPLEMENTATION
+#include "data_structures/dstring.h"
+#define DARENA_IMPLEMENTATION
+#include "utils/darena.h"

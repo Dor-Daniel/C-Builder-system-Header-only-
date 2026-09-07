@@ -130,8 +130,8 @@ void darr_insert_at(void ** darray, const void *element, u64 index)
         *darray = _block_from_head(head);
     }
 
-    void * dest = (*darray) + (index + 1) * head->type_size_in_bytes;
-    void * src  = (*darray) +  index      * head->type_size_in_bytes;
+    void * dest = (u8*)(*darray) + (index + 1) * head->type_size_in_bytes;
+    void * src  = (u8*)(*darray) +  index      * head->type_size_in_bytes;
     u64 amount  = (head->count - index)   * head->type_size_in_bytes;
 
     memmove(dest, src, amount);
@@ -199,7 +199,7 @@ void darr_push(void **darray, const void *element)
         *darray = _block_from_head(head);
     }
 
-    void * dest = (*darray) + head->count * head->type_size_in_bytes;
+    void * dest = (u8*)(*darray) + head->count * head->type_size_in_bytes;
 
     memcpy(dest, element, head->type_size_in_bytes);
 
